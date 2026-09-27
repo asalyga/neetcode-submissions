@@ -1,0 +1,10 @@
+class Solution:
+    def scoreOfString(self, s: str) -> int:
+        left = 0
+        right = left + 1
+        score = 0
+        while right <= (len(s) - 1):
+            score += abs(ord(s[left]) - ord(s[right]))
+            left += 1
+            right += 1
+        return score
